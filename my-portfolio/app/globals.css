@@ -1,4 +1,11 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* Add your custom base styles here */
+    body{
+      @apply font-primary bg-primary text-white leading-loose; 
+    }
+}
   
