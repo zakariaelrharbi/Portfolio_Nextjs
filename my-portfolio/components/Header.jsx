@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 
 // components
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
         {/* Mobile Nav */}
         {/* hide it in the desktop size */}
         <div className="xl:hidden flex items-center ">
-            mobile
+            <MobileNav />
         </div>
 
     </div>
