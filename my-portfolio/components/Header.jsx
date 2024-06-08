@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -5,7 +6,6 @@ import { Button } from "./ui/button";
 // components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-
 
 const Header = () => {
   return <header className="py-8 lg:py-12  text-white ">
@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* Mobile Nav */}
         {/* hide it in the desktop size */}
-        <div className="xl:hidden flex items-center ">
+        <div className="xl:hidden ">
             <MobileNav />
         </div>
 
