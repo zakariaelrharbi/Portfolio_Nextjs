@@ -8,7 +8,7 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
-  return <header className="py-8 lg:py-12  text-white ">
+  return <header className="py-4 lg:py-12  text-white ">
     <div className="container max-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* Mobile Nav */}
         {/* hide it in the desktop size */}
-        <div className="xl:hidden ">
+        <div className="xl:hidden">
             <MobileNav />
         </div>
 
