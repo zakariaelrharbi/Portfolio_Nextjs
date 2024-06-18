@@ -7,6 +7,8 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiMongodb,
+  SiExpress,
+  SiTypescript,
 } from 'react-icons/si';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -109,22 +111,26 @@ const education = {
 const skills = {
   title: 'My Skills',
   description: 'I have experience with a variety of technologies and tools, including HTML, CSS, JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills, and I am constantly working on new projects to expand my knowledge.',
-  skills: [
+  skillsList: [
     {
       icon: <FaHtml5 />,
-      name: 'HTML',
+      name: 'HTML 5',
     },
     {
       icon: <FaCss3 />,
-      name: 'CSS',
+      name: 'CSS 3',
     },
     {
       icon: <FaJs />,
       name: 'JavaScript',
     },
     {
+      icon: <SiTypescript />,
+      name: 'Typescript',
+    },
+    {
       icon: <FaReact />,
-      name: 'React',
+      name: 'React.js',
     },
     {
       icon: <SiNextdotjs />,
@@ -133,6 +139,10 @@ const skills = {
     {
       icon: <FaNodeJs />,
       name: 'Node.js',
+    },
+    {
+      icon: <SiExpress />,
+      name: 'Express.js',
     },
     {
       icon: <SiTailwindcss />,
@@ -227,8 +237,33 @@ const Resume = () => {
             </div>
           </TabsContent>
           {/* experience */}
-          <TabsContent value='skills' className='w-full'>
-            skills
+          <TabsContent value='skills' className='w-full h-full'>
+            <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col gap-[30px] text-center">
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left">{skills.description}</p>
+              </div>
+              <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xl:gap-[10px] gap-4 mb-3">
+                {skills.skillsList.map((skill, index) => {
+                  return (
+                    <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center">
+                              <div className="text-6xl hover:text-accent transition-all duration-300">{skill.icon}
+                                
+                              </div>
+                              <p className="text-white ml-4 hover:text-accent transition-all duration-300">{skill.name}</p>
+                          </TooltipTrigger>
+                          
+                                            
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </TabsContent>
           {/* experience */}
           <TabsContent value='about' className='w-full'>
