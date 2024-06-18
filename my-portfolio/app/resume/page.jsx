@@ -57,16 +57,16 @@ const experience = {
   description: 'I have worked on a variety of projects, including building websites from scratch, creating web applications, and developing APIs. I have experience with both front-end and back-end technologies, and I am always looking for new challenges to tackle.',
   jobs: [
     {
-      company: 'Influence Global',
-      title: 'Full Stack Developer - Internship',
-      date: 'June 2024 - present',
-      description: 'Developing an online print shop using React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
-    },
-    {
       company: 'Arkx Talent Factory',
-      title: 'Full Stack Developer - Internship',
+      title: 'Full Stack Developer - Intern',
       date: 'Jan 2024 - June 2024',
       description: 'Developed websites and web applications for clients using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
+    },
+    {
+      company: 'Influence Global',
+      title: 'Full Stack Developer - Intern',
+      date: 'June 2024 - present',
+      description: 'Developing an online print shop using React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
     },
   ],
 };
@@ -178,7 +178,25 @@ const Resume = () => {
             <div className="flex flex-col gap-[30px] text-center">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{experience.description}</p>
-
+              <ScrollArea>
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  {experience.jobs.map((job, index) => {
+                    return (
+                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <span>{job.date}</span>
+                        <h3 className="text-[15px] lg:text-left">{job.title}</h3>
+                        <div>
+                          {/* dot */}
+                          <span></span>
+                          <p>{job.company}</p>
+                        </div>
+                      </li>
+                    )
+                  }
+                    
+                  )}
+                </ul>
+              </ScrollArea>
             </div>
           </TabsContent>
           {/* experience */}
