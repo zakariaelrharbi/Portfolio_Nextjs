@@ -176,8 +176,8 @@ const Resume = () => {
           {/* experience */}
           <TabsContent value='experience' className='w-full'>
             <div className="flex flex-col gap-[30px] text-center">
-              <h3>{experience.title}</h3>
-              <p className="text-left ml-5">{experience.description}</p>
+              <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{experience.description}</p>
 
             </div>
           </TabsContent>
