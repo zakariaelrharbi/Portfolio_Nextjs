@@ -58,13 +58,13 @@ const experience = {
   jobs: [
     {
       company: 'Arkx Talent Factory',
-      title: 'Full Stack Developer - Intern',
+      title: 'Full Stack Developer Intern',
       date: 'Jan 2024 - June 2024',
       description: 'Developed websites and web applications for clients using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
     },
     {
       company: 'Influence Global',
-      title: 'Full Stack Developer - Intern',
+      title: 'Full Stack Developer Intern',
       date: 'June 2024 - present',
       description: 'Developing an online print shop using React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
     },
@@ -75,13 +75,20 @@ const experience = {
 const education = {
   icon: 'education-icon',
   title: 'My Education',
-  description: 'I hold a Baccalaureate degree in Economics from the University Polydisciplinaire El Jadida in Morocco. I have also completed several online courses in web development and programming, and a bootcamp in web development. I am always looking for new opportunities to learn and grow.',
+  description: 'I hold a Baccalaureate degree in Economics from the University Polydisciplinaire El Jadida in Morocco. I have also completed several online courses in web development and programming, and a bootcamp in web development. ',
   schools: [
     {
-      school: "Lycée Sidi Bennour",
-      degree: "Baccalaureate degree in Science Physics",
-      date: "2017",
-      description: "Studied physics, with a focus on scientific principles and methodologies. Completed various projects and assignments, and graduated with honors."
+      school: "Arkx Talent Factory - JobInTech",
+      degree: "Full Stack Development Bootcamp.",
+      date: "Jan 2024 - June 2024",
+      description: "The Arkx Talent Factory Bootcamp Programs are intensive 6-month programs that equip you with the skills and network to become a full stack developer. The program includes front-end and back-end development, as well as databases and APIs. It is project-based and includes peer-learning and mentorship."
+    },
+    
+    {
+      school: 'ALX Software Engineering Program Online',
+      degree: 'Certificates in Software Engineering - Frontend Developer',
+      date: '2023 - 2024',
+      description: 'The ALX software engineering program is an intensive 12-month program equipping you with the skills and network to become a front-end developer or back-end developer. It includes low- and high-level programming, algorithms, and databases. It also includes system engineering and networking. The program is project-based and includes peer-learning and mentorship.'
     },
     {
       school: "University Polydisciplinaire El Jadida",
@@ -90,17 +97,11 @@ const education = {
       description: "Studied economics, with a focus on financial principles and market analysis."
     },
     {
-      school: 'ALX Software Engineering Program Online',
-      degree: 'Certificates in Software Engineering - Frontend Developer',
-      date: '2023 - 2024',
-      description: 'The ALX software engineering program is an intensive 12-month program equipping you with the skills and network to become a front-end developer or back-end developer. It includes low- and high-level programming, algorithms, and databases. It also includes system engineering and networking. The program is project-based and includes peer-learning and mentorship.'
+      school: "Lycée Sidi Bennour",
+      degree: "Baccalaureate degree in Science Physics",
+      date: "2017",
+      description: "Studied physics, with a focus on scientific principles and methodologies. Completed various projects and assignments, and graduated with honors."
     },
-    {
-      school: "Arkx Talent Factory Bootcamp - JobInTech",
-      degree: "Certificates in Full Stack Development.",
-      date: "Jan 2024 - June 2024",
-      description: "The Arkx Talent Factory Bootcamp Programs are intensive 6-month programs that equip you with the skills and network to become a full stack developer. The program includes front-end and back-end development, as well as databases and APIs. It is project-based and includes peer-learning and mentorship."
-    }
   ],
 };
 
@@ -164,7 +165,7 @@ const Resume = () => {
           defaultValue='experience'
           className='flex flex-col lg:flex-row gap-[60px]'
         >
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 '>
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto md:mx-0 xl:mx-0 gap-6'>
             <TabsTrigger value='experience' >Experience</TabsTrigger>
             <TabsTrigger value='education'>Education</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
@@ -179,16 +180,16 @@ const Resume = () => {
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{experience.description}</p>
               <ScrollArea>
-                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ul className="grid grid-cols-1 lg:grid-cols-1 md:grid-col-1 gap-[30px]">
                   {experience.jobs.map((job, index) => {
                     return (
-                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                        <span>{job.date}</span>
-                        <h3 className="text-[15px] lg:text-left">{job.title}</h3>
-                        <div>
+                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-center gap-1">
+                        <span className="text-accent">{job.date}</span>
+                        <h3 className="text-xl max-w-[390px] min-h-[30px] text-center lg:text-center">{job.title}</h3>
+                        <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span></span>
-                          <p>{job.company}</p>
+                          <span className="bg-accent w-[6px] h-[6px] rounded-full"></span>
+                          <p className="text-white/70">{job.company}</p>
                         </div>
                       </li>
                     )
@@ -199,9 +200,31 @@ const Resume = () => {
               </ScrollArea>
             </div>
           </TabsContent>
-          {/* experience */}
+          {/* education*/}
           <TabsContent value='education' className='w-full'>
-            education
+          <div className="flex flex-col gap-[30px] text-center">
+              <h3 className="text-4xl font-bold">{education.title}</h3>
+              <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{education.description}</p>
+              <ScrollArea className='h-[400px]'>
+                <ul className="grid grid-cols-1 lg:grid-cols-1 md:grid-col-1 gap-[30px]">
+                  {education.schools.map((item, index) => {
+                    return (
+                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-center gap-1">
+                        <span className="text-accent">{item.date}</span>
+                        <h3 className="text-xl  max-w-[390px] min-h-[30px] text-center lg:text-center">{item.degree}</h3>
+                        <div className="flex items-center gap-3">
+                          {/* dot */}
+                          <span className="bg-accent w-[6px] h-[6px] rounded-full"></span>
+                          <p className="text-white/70">{item.school}</p>
+                        </div>
+                      </li>
+                    )
+                  }
+                    
+                  )}
+                </ul>
+              </ScrollArea>
+            </div>
           </TabsContent>
           {/* experience */}
           <TabsContent value='skills' className='w-full'>
