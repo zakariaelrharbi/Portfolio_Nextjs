@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
 // About data
 const about = {
   title: 'About Me',
-  description: 'I am a full stack developer with a passion for creating beautiful and functional websites. I have experience with HTML, CSS, JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.',
+  description: 'I am a full stack developer with a passion for creating beautiful and functional websites. I have experience with HTML 5 , CSS 3, JavaScript, React.js, Node.js, MongoDB, Next.js, TypeScript, Git, GitHub, Postman, Redux, APIs, and Express.js. I am always eager to learn new technologies and improve my skills.',
   info: [
     {
       fieldName: 'Name',
@@ -114,11 +114,11 @@ const skills = {
   skillsList: [
     {
       icon: <FaHtml5 />,
-      name: 'HTML 5',
+      name: 'Html 5',
     },
     {
       icon: <FaCss3 />,
-      name: 'CSS 3',
+      name: 'Css 3',
     },
     {
       icon: <FaJs />,
@@ -126,7 +126,7 @@ const skills = {
     },
     {
       icon: <SiTypescript />,
-      name: 'Typescript',
+      name: 'typescript',
     },
     {
       icon: <FaReact />,
@@ -175,7 +175,7 @@ const Resume = () => {
           defaultValue='experience'
           className='flex flex-col lg:flex-row gap-[60px]'
         >
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto md:mx-0 xl:mx-0 gap-6'>
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto md:mx-0 xl:mx-0 gap-6 mt-6'>
             <TabsTrigger value='experience' >Experience</TabsTrigger>
             <TabsTrigger value='education'>Education</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
@@ -236,7 +236,7 @@ const Resume = () => {
               </ScrollArea>
             </div>
           </TabsContent>
-          {/* experience */}
+          {/* skills */}
           <TabsContent value='skills' className='w-full h-full'>
             <div className="flex flex-col gap-[30px]">
               <div className="flex flex-col gap-[30px] text-center">
@@ -253,7 +253,7 @@ const Resume = () => {
                               <div className="text-6xl hover:text-accent transition-all duration-300">{skill.icon}
                                 
                               </div>
-                              <p className="text-white ml-4 hover:text-accent transition-all duration-300">{skill.name}</p>
+                              <p className="text-white ml-4 hover:text-accent transition-all duration-300 capitalize">{skill.name}</p>
                           </TooltipTrigger>
                           
                                             
@@ -265,9 +265,22 @@ const Resume = () => {
               </ul>
             </div>
           </TabsContent>
-          {/* experience */}
-          <TabsContent value='about' className='w-full'>
-            about
+          {/* about */}
+          <TabsContent value='about' className='w-full text-center xl:text-left'>
+            <div className="flex flex-col gap-[30px]">
+              <h3 className="text-4xl font-bold">{about.title}</h3>
+              <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left ml-3">{about.description}</p>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6  max-w-[910px] mx-auto xl:mx-0 mb-2">
+                {about.info.map((item, index) => {
+                  return (
+                    <li key={index} className="flex items-center justify-start xl:justify-start gap-4 ">
+                      <span className="text-white/70">{item.fieldName}:</span>
+                      <span className="text-xl">{item.fieldValue}</span>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </TabsContent>
         </div>
         </Tabs>
