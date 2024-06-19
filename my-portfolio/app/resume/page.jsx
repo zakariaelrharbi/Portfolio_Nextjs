@@ -186,7 +186,7 @@ const Resume = () => {
         <div className="min-h-[70vh] w-full">
           {/* experience */}
           <TabsContent value='experience' className='w-full'>
-            <div className="flex flex-col gap-[30px] text-center">
+            <div className="flex flex-col gap-[30px] text-center xl:mt-6">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{experience.description}</p>
               <ScrollArea>
@@ -212,7 +212,7 @@ const Resume = () => {
           </TabsContent>
           {/* education*/}
           <TabsContent value='education' className='w-full'>
-          <div className="flex flex-col gap-[30px] text-center">
+          <div className="flex flex-col gap-[30px] text-center xl:mt-6">
               <h3 className="text-4xl font-bold">{education.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{education.description}</p>
               <ScrollArea className='h-[400px]'>
@@ -239,7 +239,7 @@ const Resume = () => {
           {/* skills */}
           <TabsContent value='skills' className='w-full h-full'>
             <div className="flex flex-col gap-[30px]">
-              <div className="flex flex-col gap-[30px] text-center">
+              <div className="flex flex-col gap-[30px] text-center xl:mt-6">
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left">{skills.description}</p>
               </div>
@@ -267,15 +267,15 @@ const Resume = () => {
           </TabsContent>
           {/* about */}
           <TabsContent value='about' className='w-full text-center xl:text-left'>
-            <div className="flex flex-col gap-[30px]">
+            <div className="flex flex-col gap-[30px] xl:mt-6 text-center">
               <h3 className="text-4xl font-bold">{about.title}</h3>
               <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left ml-3">{about.description}</p>
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6  max-w-[910px] mx-auto xl:mx-0 mb-2">
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6  max-w-[910px] mx-auto xl:mx-0 mb-2 gap-x-[90px]">
                 {about.info.map((item, index) => {
                   return (
-                    <li key={index} className="flex items-center justify-start xl:justify-start gap-4 ">
+                    <li key={index} className="flex items-center justify-start xl:justify-start gap-4">
                       <span className="text-white/70">{item.fieldName}:</span>
-                      <span className="text-xl">{item.fieldValue}</span>
+                      <span className="text-[18px]">{item.fieldValue}</span>
                     </li>
                   )
                 })}
