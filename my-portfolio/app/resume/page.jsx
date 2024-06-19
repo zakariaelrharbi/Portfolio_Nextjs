@@ -34,20 +34,20 @@ const about = {
       fieldValue: '2 Years'
     },
     {
-      fieldName: 'Nationality',
-      fieldValue: 'Moroccan'
-    },
-    {
       fieldName: 'Email',
       fieldValue: 'Zakariaelrharbi269@gmail.com'
     },
     {
-      fieldName: 'Freelance',
-      fieldValue: 'Available'
+      fieldName: 'Nationality',
+      fieldValue: 'Moroccan'
     },
     {
       fieldName: 'Languages',
       fieldValue: 'English, Arabic, French'
+    },
+    {
+      fieldName: 'Freelance',
+      fieldValue: 'Available'
     },
   ],
 };
@@ -270,7 +270,7 @@ const Resume = () => {
             <div className="flex flex-col gap-[30px] xl:mt-6 text-center">
               <h3 className="text-4xl font-bold">{about.title}</h3>
               <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left ml-3">{about.description}</p>
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6  max-w-[910px] mx-auto xl:mx-0 mb-2 gap-x-[90px]">
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-4  max-w-[910px] mx-auto xl:mx-0 mb-2">
                 {about.info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center justify-start xl:justify-start gap-4">
