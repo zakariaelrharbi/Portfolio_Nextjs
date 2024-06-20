@@ -48,7 +48,7 @@ const projects = [
     category: 'fullstack',
     title: 'Bloglet',
     description: 'Project 4 description',
-    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'TailwindCSS'}, {name: 'Redux'}],
+    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: '',
     live: '',
     github: '',
@@ -77,6 +77,12 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+  const handleSlideChange = (swiper) => {
+    // get current slide index
+    const currentIndex = swiper.activeIndex;
+    // update project state based on current slide index
+    setProject(projects[currentIndex]);
+  }
   return (
     <motion.section 
     initial={{opacity:0}}
@@ -86,46 +92,77 @@ const Work = () => {
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
           <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none '>
-            {/*/ outline num */}
-            <div className='text-8xl leading-none font-extrabold text-transparent text-outline group transitiob-all duration-500 group-hover:text-accent'>{project.num}</div>
-            {/* project category */}
-            <h2 className='text-[42px] capitalize font-bold leading-none text-white  hover:text-accent transitiob-all duration-500'>{project.category}</h2>
-            {/* project description */}
-            <p className='text-[18px] text-white/70'>{project.description}</p>
-            {/* project stack */}
-            <ul className='flex gap-4'>
-              {project.stack.map((item, index) => {
-                return (
-                  <li key={index} className='text-xl text-accent'>{item.name}
-                  {/* remove last comma */}
-                  {index !== project.stack.length - 1 && <span className='text-white/70'>, </span>}
-                  </li>
-                )
-              
-              })
-              }
-            </ul>
-            {/* border */}
-            <div className='border border-white/40'></div>
-            {/* button */}
-            <div>
-              {/* live project button */}
-              <Link href={project.github}>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                      
-                      <BsArrowUpRight className='text-white text-3xl rotate-45 hover:rotate-0 transition-all duration-500 group-hover:text-accent'/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <span>View on Github</span>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </Link>
+            <div className='flex flex-col gap-[30px] h-[50%]'>
+              {/*/ outline num */}
+              <div className='text-8xl leading-none font-extrabold text-transparent text-outline group transitiob-all duration-500 group-hover:text-accent'>{project.num}</div>
+              {/* project category */}
+              <h2 className='text-[42px] capitalize font-bold leading-none text-white  hover:text-accent transitiob-all duration-500'>{project.category}</h2>
+              {/* project description */}
+              <p className='text-[18px] text-white/70'>{project.description}</p>
+              {/* project stack */}
+              <ul className='grid  grid-cols-2 xl:grid-cols-3 gap-1 '>
+                {project.stack.map((item, index) => {
+                  return (
+                    <li key={index} className='text-xl text-accent'>{item.name}
+                    {/* remove last comma */}
+                    {index !== project.stack.length - 1 && <span className='text-white/70'>,</span>}
+                    </li>
+                  )
+                
+                })
+                }
+              </ul>
+              {/* border */}
+              <div className='border border-white/40'></div>
+              {/* button */}
+              <div className='flex items-center gap-4'>
+                {/* live project button */}
+                <Link href={project.live}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                        
+                        <BsArrowUpRight className='text-white text-3xl rotate-45 hover:rotate-0 transition-all duration-500 group-hover:text-accent'/>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <span>Live Project</span>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* github repo */}
+                <Link href={project.github}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                        
+                        <BsGithub className='text-white text-3xl   group-hover:text-accent'/>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <span>View In Github</span>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className='w-full xl:w-[50%]'>slider</div>
+          <div className='w-full xl:w-[50%]'>
+            <Swiper 
+            spaceBetween={30}
+            slidesPerView={1}
+            className='xl:h-[520px] mb-12'
+            onSlideChange={handleSlideChange}
+            >
+              {projects.map((project, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Image src={project.image} alt={project.title} layout='responsive' width={1920} height={1080}/>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
 
