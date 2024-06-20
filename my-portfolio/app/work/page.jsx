@@ -21,7 +21,7 @@ const projects = [
     stack:[{name: 'Html 5'}, {name: 'Css 3'}, {name: 'Javascript'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
   {
     num : '02',
@@ -31,7 +31,7 @@ const projects = [
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
   {
     num : '03',
@@ -41,7 +41,7 @@ const projects = [
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
   {
     num : '04',
@@ -51,7 +51,7 @@ const projects = [
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'TailwindCSS'}, {name: 'Redux'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
   {
     num : '05',
@@ -61,7 +61,7 @@ const projects = [
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
   {
     num : '06',
@@ -71,7 +71,7 @@ const projects = [
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: '',
     live: '',
-    url: '',
+    github: '',
   },
 ];
 
@@ -108,6 +108,21 @@ const Work = () => {
             {/* border */}
             <div className='border border-white/40'></div>
             {/* button */}
+            <div>
+              <Link href={project.github}>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full'>
+                      
+                      <BsArrowUpRight className=' rotate-45 hover:rotate-0 transition-all duration-500'/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <span>View on Github</span>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+            </div>
           </div>
           <div className='w-full xl:w-[50%]'>slider</div>
         </div>
