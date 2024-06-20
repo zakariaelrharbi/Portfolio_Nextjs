@@ -27,7 +27,8 @@
     "swc-loader": "^0.2.6",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "textarea": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^8",

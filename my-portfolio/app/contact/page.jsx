@@ -3,9 +3,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger } from "@radix-ui/react-select";
+import { Textarea } from "@/components/ui/textarea"
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -27,13 +27,28 @@ const info = [
   }
 ]
 
-
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div>
-      contact page
-    </div>
+    <motion.section
+    initial={{opacity:0}}
+    animate={{opacity:1, transition:{delay:1.5, duration:0.4, ease:'easeIn'}}}
+    className="py-6"
+    >
+      <div className="container mx-auto">
+        <div>
+          {/* form */}
+          <div>
+            <form action="">form</form>
+          </div>
+          {/* info */}
+          <div>
+            info
+          </div>
+        </div>
+      </div>
+    </motion.section>
   )
 }
 
