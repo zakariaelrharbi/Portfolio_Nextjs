@@ -86,7 +86,7 @@ const Work = () => {
   return (
     <motion.section 
     initial={{opacity:0}}
-    animate={{opacity:1}}
+    animate={{opacity:1, transition:{delay:1.5, duration:0.4, ease:'easeIn'}}}
     className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
       <div className="container mx-auto">
@@ -120,9 +120,8 @@ const Work = () => {
                 <Link href={project.live}>
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                        
-                        <BsArrowUpRight className='text-white text-3xl rotate-45 hover:rotate-0 transition-all duration-500 group-hover:text-accent'/>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-[#3256232e] flex justify-center items-center group'>
+                        <BsArrowUpRight className='text-white text-3xl  group-hover:text-accent'/>
                       </TooltipTrigger>
                       <TooltipContent>
                         <span>Live Project</span>
@@ -134,7 +133,7 @@ const Work = () => {
                 <Link href={project.github}>
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-[#3256232e] flex justify-center items-center group'>
                         
                         <BsGithub className='text-white text-3xl   group-hover:text-accent'/>
                       </TooltipTrigger>
@@ -156,8 +155,17 @@ const Work = () => {
             >
               {projects.map((project, index) => {
                 return (
-                  <SwiperSlide key={index}>
-                    <Image src={project.image} alt={project.title} layout='responsive' width={1920} height={1080}/>
+                  <SwiperSlide key={index} className='w-full'>
+                    <div className='h-[460px] relative group flex justify-center items-center bg-pink-50/20'>
+                    {/* overlay */}
+                    <div>
+
+                    </div>
+                    {/* images */}
+                    <div className='relative w-full h-full'> 
+                      <Image src={project.image} fill className='object-cover' alt=''/>
+                    </div>
+                    </div>
                   </SwiperSlide>
                 )
               })}
