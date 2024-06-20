@@ -85,11 +85,11 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
-          <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
+          <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none '>
             {/*/ outline num */}
-            <div className='text-8xl leading-none font-extrabold text-transparent text-outline hover:text-accent transitiob-all duration-500'>{project.num}</div>
+            <div className='text-8xl leading-none font-extrabold text-transparent text-outline group transitiob-all duration-500 group-hover:text-accent'>{project.num}</div>
             {/* project category */}
-            <h2 className='text-[42px] capitalize font-bold leading-none text-white hover:text-accent transitiob-all duration-500'>{project.category}</h2>
+            <h2 className='text-[42px] capitalize font-bold leading-none text-white  hover:text-accent transitiob-all duration-500'>{project.category}</h2>
             {/* project description */}
             <p className='text-[18px] text-white/70'>{project.description}</p>
             {/* project stack */}
@@ -109,12 +109,13 @@ const Work = () => {
             <div className='border border-white/40'></div>
             {/* button */}
             <div>
+              {/* live project button */}
               <Link href={project.github}>
                 <TooltipProvider>
                   <Tooltip>
-                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full'>
+                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
                       
-                      <BsArrowUpRight className=' rotate-45 hover:rotate-0 transition-all duration-500'/>
+                      <BsArrowUpRight className='text-white text-3xl rotate-45 hover:rotate-0 transition-all duration-500 group-hover:text-accent'/>
                     </TooltipTrigger>
                     <TooltipContent>
                       <span>View on Github</span>
