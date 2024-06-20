@@ -87,10 +87,27 @@ const Work = () => {
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
           <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
             {/*/ outline num */}
-            <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
+            <div className='text-8xl leading-none font-extrabold text-transparent text-outline hover:text-accent transitiob-all duration-500'>{project.num}</div>
             {/* project category */}
-            <div className='text-[42px] capitalize font-bold leading-none text-white'>{project.category}</div>
-            {/* project title */}
+            <h2 className='text-[42px] capitalize font-bold leading-none text-white hover:text-accent transitiob-all duration-500'>{project.category}</h2>
+            {/* project description */}
+            <p className='text-[18px] text-white/70'>{project.description}</p>
+            {/* project stack */}
+            <ul className='flex gap-4'>
+              {project.stack.map((item, index) => {
+                return (
+                  <li key={index} className='text-xl text-accent'>{item.name}
+                  {/* remove last comma */}
+                  {index !== project.stack.length - 1 && <span className='text-white/70'>, </span>}
+                  </li>
+                )
+              
+              })
+              }
+            </ul>
+            {/* border */}
+            <div className='border border-white/40'></div>
+            {/* button */}
           </div>
           <div className='w-full xl:w-[50%]'>slider</div>
         </div>
