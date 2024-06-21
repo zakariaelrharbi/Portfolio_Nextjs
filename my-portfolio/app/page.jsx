@@ -11,7 +11,7 @@ import Stats from '@/components/Stats';
 const page = () => {
   return (
     <section className='h-full'>
-      <div className="container max-auto  h-full">
+      <div className="container max-auto  h-full xl:py-20">
         <div className='flex flex-col xl:flex-row items-center justify-between'>
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
