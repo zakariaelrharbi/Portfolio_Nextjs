@@ -1,21 +1,37 @@
 'use client';
 import { Button } from '../components/ui/button';
-import {FiDownload} from 'react-icons/fi';
+import { FiDownload } from 'react-icons/fi';
 
 // components
 import Social from '@/components/Social';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 
+import jsPDF from 'jspdf';
 
-const page = () => {
+const Page = () => {
+  
+  const downloadPdf = () => {
+    const doc = new jsPDF();
+    const imgUrl = 'https://i.ibb.co/qrSLtqN/Zakaria-Elrharbi-en-1.png';
+    
+    const [pageWidth, pageHeight] = [doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight()];
+    const imgWidth = 692, imgHeight = 979;
+    const ratio = Math.min(pageWidth / imgWidth, pageHeight / imgHeight);
+  
+    doc.addImage(imgUrl, 'PNG', 0, 0, imgWidth * ratio, imgHeight * ratio);
+    doc.save('Zakaria-Elrharbi-CV.pdf');
+  }
+  
+  
+
   return (
     <section className='h-full'>
-      <div className="container max-auto  h-full xl:py-20">
+      <div className="container mx-auto h-full xl:py-20">
         <div className='flex flex-col xl:flex-row items-center justify-between'>
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
-            <span className='text-xl'>Full Stack-Developer</span>
+            <span className='text-xl'>Full Stack Developer</span>
             <h1 className='h1 mb-6'>
               Hello, I'm <br/><span className='text-accent'>Zakaria ELRHARBI</span>
             </h1>
@@ -23,21 +39,20 @@ const page = () => {
               As a Full Stack Developer, I create seamless, user-centric web applications by integrating both front-end and back-end technologies. 
               My focus is on delivering high-quality, scalable solutions that meet client needs and exceed expectations.
             </p>
-            {/* button and scial media */}
+            {/* button and social media */}
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Button variant='outline' size='lg'
-              className='uppercase flex items-center gap-2'>
-                <span>
-                  Download CV
-                </span>
+              <Button 
+                variant='outline' 
+                size='lg'
+                onClick={downloadPdf}
+                className='uppercase flex items-center gap-2'>
+                <span>Download CV</span>
                 <FiDownload className='text-xl'/>
               </Button>
               <div className='mb-8 xl:mb-0'>
-                <Social containerStyle='flex gap-6' iconStyles='w-9 h-9 border border-accent rounded-full flex justify-center items-center
-                text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500'/>
+                <Social containerStyle='flex gap-6' iconStyles='w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary transition-all duration-500'/>
               </div>
             </div>
-
           </div>
           {/* photo */}
           <div>
@@ -50,4 +65,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;
