@@ -34,10 +34,10 @@ const Page = () => {
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Full Stack Developer</span>
-            <h1 className='h1 mb-4'>
+            <h1 className='h1 mb-2'>
               Hello, I'm <br/>
             </h1>
-            <h2 className='text-accent mb-4 text-5xl'>
+            <h2 className='text-accent mb-6 text-5xl'>
             <Typewriter
                   style={{color: '#f3c100'}}
                   options={{
