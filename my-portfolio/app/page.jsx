@@ -8,6 +8,8 @@ import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 
 import jsPDF from 'jspdf';
+import Typewriter from 'typewriter-effect';
+
 
 const Page = () => {
   
@@ -32,9 +34,24 @@ const Page = () => {
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Full Stack Developer</span>
-            <h1 className='h1 mb-6'>
-              Hello, I'm <br/><span className='text-accent'>Zakaria ELRHARBI</span>
+            <h1 className='h1 mb-4'>
+              Hello, I'm <br/>
             </h1>
+            <h2 className='text-accent mb-4 text-5xl'>
+            <Typewriter
+                  style={{color: '#f3c100'}}
+                  options={{
+                  strings: [
+                    "Zakaria ELRHARBI",
+                    "Front-End Developer",
+                    "Back-End Developer",
+                    "Full Stack Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  }}
+                />
+            </h2>
             <p className='max-w-[600px] mb-9 text-white/80'>
               As a Full Stack Developer, I create seamless, user-centric web applications by integrating both front-end and back-end technologies. 
               My focus is on delivering high-quality, scalable solutions that meet client needs and exceed expectations.
