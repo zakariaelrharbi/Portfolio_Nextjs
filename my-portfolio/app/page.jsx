@@ -32,27 +32,26 @@ const Page = () => {
       <div className="container mx-auto h-full xl:py-20">
         <div className='flex flex-col xl:flex-row items-center justify-between'>
           {/* text */}
-          <div className='text-center xl:text-left order-2 xl:order-none'>
+          <div className='text-center xl:text-left order-2 xl:order-none pt-3'>
             <span className='text-xl'>Full Stack Developer</span>
             <h1 className='h1 mb-2'>
               Hello, I'm <br/>
+              <span className='text-white text-4xl xl:text-6xl'>Zakaria Elrharbi</span>
             </h1>
-            <h2 className='text-accent mb-6 text-5xl'>
+            <h2 className='text-accent mb-6 xl:text-5xl text-3xl'>
             <Typewriter
                   style={{color: '#f3c100'}}
                   options={{
                   strings: [
-                    "Zakaria ELRHARBI",
                     "Front-End Developer",
                     "Back-End Developer",
-                    "Full Stack Developer",
                   ],
                   autoStart: true,
                   loop: true,
                   }}
                 />
             </h2>
-            <p className='max-w-[600px] mb-9 text-white/80'>
+            <p className='max-w-[600px] mb-9 text-white/80 text-left '>
               As a Full Stack Developer, I create seamless, user-centric web applications by integrating both front-end and back-end technologies. 
               My focus is on delivering high-quality, scalable solutions that meet client needs and exceed expectations.
             </p>
