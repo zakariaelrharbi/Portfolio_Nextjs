@@ -97,7 +97,8 @@ const Work = () => {
               {/*/ outline num */}
               <div className='text-8xl leading-none font-extrabold text-transparent text-outline group transitiob-all duration-500 group-hover:text-accent'>{project.num}</div>
               {/* project category */}
-              <h2 className='text-[42px] capitalize font-bold leading-none text-white  hover:text-accent transitiob-all duration-500'>{project.category}</h2>
+              <h2 className='text-[42px] capitalize font-bold leading-none text-white  hover:text-accent transitiob-all duration-500 cursor-pointer'>{project.title}</h2>
+              <h2 className='text-[32px] capitalize font-bold leading-none text-accent transitiob-all duration-500'>{project.category}</h2>
               {/* project description */}
               <p className='text-[18px] text-white/70'>{project.description}</p>
               {/* project stack */}
