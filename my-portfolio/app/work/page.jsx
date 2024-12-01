@@ -11,19 +11,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
+import bloglet from '../../public/blogletImg.png'
 
 
 const projects = [
-  {
-    num : '01',
-    category: 'frontend',
-    title: 'Frajaflex',
-    description: 'Project 1 description',
-    stack:[{name: 'Html 5'}, {name: 'Css 3'}, {name: 'Javascript'}],
-    image: '',
-    live: '',
-    github: '',
-  },
   {
     num : '02',
     category: 'backend',
