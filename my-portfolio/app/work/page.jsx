@@ -11,6 +11,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
+import img1 from '../../public/blogimg2.png'
 
 
 
@@ -31,9 +32,9 @@ const projects = [
     title: 'Bloglet',
     description: 'Project 4 description',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
-    image:'',
+    image: img1,
     live: '',
-    github: '',
+    github: 'https://github.com/zakariaelrharbi/Bloglet',
   },
   {
     num : '03',
@@ -156,7 +157,7 @@ const Work = () => {
                     </div>
                     {/* images */}
                     <div className='relative w-full h-full'> 
-                      <Image src={project.image} fill className='object-cover' alt=''/>
+                      <Image src={project.image} fill  className='object-cover' alt=''/>
                     </div>
                     </div>
                   </SwiperSlide>
