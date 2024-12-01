@@ -55,6 +55,16 @@ const projects = [
     live: '',
     github: '',
   },
+  {
+    num : '05',
+    category: 'Wordpress',
+    title: 'Cuisinix',
+    description: 'Project 6 description',
+    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
+    image: '',
+    live: '',
+    github: '',
+  },
 ];
 
 const Work = () => {
