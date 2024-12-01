@@ -11,12 +11,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
-import bloglet from '../../public/blogletImg.png'
+
 
 
 const projects = [
   {
-    num : '02',
+    num : '01',
     category: 'backend',
     title: 'SurfMinds',
     description: 'Project 2 description',
@@ -26,27 +26,17 @@ const projects = [
     github: '',
   },
   {
-    num : '03',
-    category: 'fullstack',
-    title: 'NewWave',
-    description: 'Project 3 description',
-    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
-    image: '',
-    live: '',
-    github: '',
-  },
-  {
-    num : '04',
+    num : '02',
     category: 'fullstack',
     title: 'Bloglet',
     description: 'Project 4 description',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
-    image: '',
+    image:'',
     live: '',
     github: '',
   },
   {
-    num : '05',
+    num : '03',
     category: 'fullstack',
     title: 'Jawhar Al Maarifa',
     description: 'Project 5 description',
@@ -56,11 +46,11 @@ const projects = [
     github: '',
   },
   {
-    num : '06',
-    category: 'fullstack',
+    num : '04',
+    category: 'Wordpress',
     title: 'YouPrint',
     description: 'Project 6 description',
-    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
+    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: '',
     live: '',
     github: '',
