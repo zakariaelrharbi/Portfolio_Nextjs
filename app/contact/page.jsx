@@ -53,10 +53,6 @@ const Contact = () => {
 
             </form>
           </div>
-          {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            info
-          </div>
         </div>
       </div>
     </motion.section>
