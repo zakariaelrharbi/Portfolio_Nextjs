@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,7 +17,6 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "firebase": "^11.0.2",
     "framer-motion": "^11.2.10",
     "jspdf-autotable": "^3.8.2",
     "lucide-react": "^0.390.0",
