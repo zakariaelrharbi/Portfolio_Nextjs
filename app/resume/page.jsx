@@ -162,8 +162,8 @@ const Resume = () => {
       animate={{ 
         opacity: 1,
         transition: {
-          duration: 0.4,
-          delay: 2,
+          duration: 0.1,
+          delay: 1,
           ease: 'easeIn'
         },
         className: 'min-h-[80vh] flex items-center justify-center py-12 xl:py-0'

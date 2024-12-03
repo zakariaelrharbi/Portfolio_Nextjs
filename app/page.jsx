@@ -29,7 +29,7 @@ const Page = () => {
 
   return (
     <section className='h-full'>
-      <div className="container mx-auto h-full xl:py-20">
+      <div className="container mx-auto h-full">
         <div className='flex flex-col xl:flex-row items-center justify-between'>
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none pt-3'>
