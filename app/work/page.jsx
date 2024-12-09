@@ -34,7 +34,7 @@ const projects = [
     num : '02',
     category: 'Wordpress',
     title: 'Cuisinix',
-    description: 'Discover the sleek and user-friendly web design of Cuisinix, an e-commerce platform dedicated to selling all kitchen essentials. From modern cookware to versatile appliances, this design seamlessly blends functionality with aesthetics to create an engaging shopping experience. Explore how clean layouts, intuitive navigation, and vibrant visuals come together to celebrate the art of cooking and kitchen organization.',
+    description: 'Discover the sleek and user-friendly web design of Cuisinix, an e-commerce platform dedicated to selling all kitchen essentials. ',
     stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: img2,
     live: 'https://cuisinix.store/',
