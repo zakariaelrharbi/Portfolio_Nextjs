@@ -14,6 +14,7 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 import img1 from '../../public/blog1.svg'
 import img2 from '../../public/cuisi1.svg'
 import img3 from '../../public/youpr1.svg'
+import img4 from '../../public/jawhar1.svg'
 
 
 const projects = [
@@ -56,9 +57,9 @@ const projects = [
     title: 'Jawhar Al Maarifa',
     description: 'Project 5 description',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
-    image: '',
+    image: img4,
     live: '',
-    github: '',
+    github: 'https://github.com/jawhare-lmaarifa/jawhar-al-maarifa',
     behance:'',
   },
   {
