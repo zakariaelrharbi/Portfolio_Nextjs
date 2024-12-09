@@ -11,23 +11,13 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
-import img1 from '../../public/blogimg2.png'
-
+import img1 from '../../public/blog1.svg'
+import img2 from '../../public/cuisi1.svg'
 
 
 const projects = [
   {
     num : '01',
-    category: 'backend',
-    title: 'SurfMinds',
-    description: 'Project 2 description',
-    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
-    image: '',
-    live: '',
-    github: '',
-  },
-  {
-    num : '02',
     category: 'fullstack',
     title: 'Bloglet',
     description: 'Project 4 description',
@@ -37,7 +27,27 @@ const projects = [
     github: 'https://github.com/zakariaelrharbi/Bloglet',
   },
   {
+    num : '02',
+    category: 'Wordpress',
+    title: 'Cuisinix',
+    description: 'Project 6 description',
+    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
+    image: img2,
+    live: '',
+    github: '',
+  },
+  {
     num : '03',
+    category: 'backend',
+    title: 'SurfMinds',
+    description: 'Project 2 description',
+    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
+    image: '',
+    live: '',
+    github: '',
+  },
+  {
+    num : '04',
     category: 'fullstack',
     title: 'Jawhar Al Maarifa',
     description: 'Project 5 description',
@@ -47,19 +57,9 @@ const projects = [
     github: '',
   },
   {
-    num : '04',
-    category: 'Wordpress',
-    title: 'YouPrint',
-    description: 'Project 6 description',
-    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
-    image: '',
-    live: '',
-    github: '',
-  },
-  {
     num : '05',
     category: 'Wordpress',
-    title: 'Cuisinix',
+    title: 'YouPrint',
     description: 'Project 6 description',
     stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: '',
