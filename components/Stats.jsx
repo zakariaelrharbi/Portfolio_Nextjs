@@ -17,7 +17,7 @@ const stats = [
     },
     {
         title: "Code commits",
-        count: 1342,
+        count: 1518,
     },
 ];
 const Stats = () => {
