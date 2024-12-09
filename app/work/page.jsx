@@ -26,6 +26,7 @@ const projects = [
     image: img1,
     live: '',
     github: 'https://github.com/zakariaelrharbi/Bloglet',
+    behance:'',
   },
   {
     num : '02',
@@ -36,6 +37,7 @@ const projects = [
     image: img2,
     live: '',
     github: '',
+    behance:'',
   },
   {
     num : '03',
@@ -46,6 +48,7 @@ const projects = [
     image: img3,
     live: '',
     github: '',
+    behance:'',
   },
   {
     num : '04',
@@ -56,6 +59,7 @@ const projects = [
     image: '',
     live: '',
     github: '',
+    behance:'',
   },
   {
     num : '05',
@@ -66,6 +70,7 @@ const projects = [
     image: '',
     live: '',
     github: '',
+    behance:'',
   },
 ];
 
