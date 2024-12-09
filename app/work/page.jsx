@@ -13,6 +13,7 @@ import Image from 'next/image';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
 import img1 from '../../public/blog1.svg'
 import img2 from '../../public/cuisi1.svg'
+import img3 from '../../public/youpr1.svg'
 
 
 const projects = [
@@ -38,11 +39,11 @@ const projects = [
   },
   {
     num : '03',
-    category: 'backend',
-    title: 'SurfMinds',
-    description: 'Project 2 description',
-    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
-    image: '',
+    category: 'Wordpress',
+    title: 'YouPrint',
+    description: 'Project 6 description',
+    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
+    image: img3,
     live: '',
     github: '',
   },
@@ -58,10 +59,10 @@ const projects = [
   },
   {
     num : '05',
-    category: 'Wordpress',
-    title: 'YouPrint',
-    description: 'Project 6 description',
-    stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
+    category: 'backend',
+    title: 'SurfMinds',
+    description: 'Project 2 description',
+    stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
     image: '',
     live: '',
     github: '',
