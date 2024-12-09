@@ -6,7 +6,7 @@ import React, {useState} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub, BsBehance } from "react-icons/bs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -149,7 +149,7 @@ const Work = () => {
                     <Tooltip>
                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-[#3256232e] flex justify-center items-center group'>
                         
-                        <BsGithub className='text-white text-3xl   group-hover:text-accent'/>
+                        <BsBehance className='text-white text-3xl   group-hover:text-accent'/>
                       </TooltipTrigger>
                       <TooltipContent>
                         <span>View In behance</span>
