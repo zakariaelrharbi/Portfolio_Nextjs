@@ -15,6 +15,7 @@ import img1 from '../../public/blog1.svg'
 import img2 from '../../public/cuisi1.svg'
 import img3 from '../../public/youpr1.svg'
 import img4 from '../../public/jawhar1.svg'
+import img5 from '../../public/surf1.svg'
 
 
 const projects = [
@@ -33,12 +34,12 @@ const projects = [
     num : '02',
     category: 'Wordpress',
     title: 'Cuisinix',
-    description: 'Project 6 description',
+    description: 'Discover the sleek and user-friendly web design of Cuisinix, an e-commerce platform dedicated to selling all kitchen essentials. From modern cookware to versatile appliances, this design seamlessly blends functionality with aesthetics to create an engaging shopping experience. Explore how clean layouts, intuitive navigation, and vibrant visuals come together to celebrate the art of cooking and kitchen organization.',
     stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: img2,
-    live: '',
+    live: 'https://cuisinix.store/',
     github: '',
-    behance:'',
+    behance:'https://www.behance.net/gallery/213050035/Cuisinix-Your-One-Stop-Kitchen-Shop',
   },
   {
     num : '03',
@@ -47,9 +48,9 @@ const projects = [
     description: 'Project 6 description',
     stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: img3,
-    live: '',
+    live: 'https://www.youprint.ma/',
     github: '',
-    behance:'',
+    behance:'https://www.behance.net/gallery/212811737/YouPrint-Online-Printing-Services-Website',
   },
   {
     num : '04',
@@ -68,9 +69,9 @@ const projects = [
     title: 'SurfMinds',
     description: 'Project 2 description',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
-    image: '',
+    image: img5,
     live: '',
-    github: '',
+    github: 'https://github.com/zakariaelrharbi/SurfMinds-Final-Project',
     behance:'',
   },
 ];
