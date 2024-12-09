@@ -143,6 +143,20 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+                {/* behance repo */}
+                <Link href={project.behance}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-[#3256232e] flex justify-center items-center group'>
+                        
+                        <BsGithub className='text-white text-3xl   group-hover:text-accent'/>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <span>View In behance</span>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
               </div>
             </div>
           </div>
