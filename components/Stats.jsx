@@ -9,7 +9,7 @@ const stats = [
     },
     {
         title: "Projects Completed",
-        count: 4,
+        count: 5,
     },
     {
         title: "Technologies mastered",
