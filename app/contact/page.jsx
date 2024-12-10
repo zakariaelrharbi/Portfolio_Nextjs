@@ -1,9 +1,30 @@
+"use client";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
+const info = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "(+212) 6 82 88 30 65",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "zakariaelrharbi269@gmail.com",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description: "Casablanca, Morocco",
+  },
+];
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +58,7 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
           setStatus("Message sent successfully!");
           setFormData({ firstname: "", lastname: "", email: "", phone: "", message: "" });
         },
@@ -56,6 +77,7 @@ const Contact = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
+          {/* Form Section */}
           <div className="xl:h-[50%] order-2 xl:order-none w-full">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
@@ -107,9 +129,18 @@ const Contact = () => {
             </form>
           </div>
 
+          {/* Contact Info Section */}
           <div className="order-1 xl:order-none flex flex-col gap-6 p-10 bg-[#1f1f23] rounded-xl text-white">
             <h3 className="text-4xl text-accent">Contact Info</h3>
-            {/* Contact Info here */}
+            {info.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="text-accent text-2xl">{item.icon}</div>
+                <div>
+                  <h4 className="text-lg font-semibold">{item.title}</h4>
+                  <p className="text-white/70">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
