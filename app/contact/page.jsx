@@ -79,7 +79,7 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form Section */}
           <div className="xl:h-[50%] order-2 xl:order-none w-full">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 py-6 px-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/70">
                 Have a project in mind or just want to say hello? Fill out the form below, and I’ll get back to you as soon as possible.
