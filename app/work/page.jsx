@@ -21,9 +21,20 @@ import img5 from '../../public/surf1.svg'
 const projects = [
   {
     num : '01',
+    category: 'front-end',
+    title: 'FlickHub',
+    description: 'FlickHub is a platform for exploring and managing movie collections with an intuitive user experience.',
+    stack:[{name: 'React.js'}, {name: 'Redux'}, {name: 'CSS'}, {name: 'firebase'}],
+    image:'',
+    live: '',
+    github: 'https://github.com/zakariaelrharbi/FlickHub',
+    behance:'',
+  },
+  {
+    num : '02',
     category: 'fullstack',
     title: 'Bloglet',
-    description: 'Project 4 description',
+    description: 'Bloglet is a full-stack blogging platform. It provides a seamless experience for creating, managing, and sharing blog posts.',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: img1,
     live: '',
@@ -31,7 +42,7 @@ const projects = [
     behance:'',
   },
   {
-    num : '02',
+    num : '03',
     category: 'Wordpress',
     title: 'Cuisinix',
     description: 'Discover the sleek and user-friendly web design of Cuisinix, an e-commerce platform dedicated to selling all kitchen essentials. ',
@@ -42,10 +53,10 @@ const projects = [
     behance:'https://www.behance.net/gallery/213050035/Cuisinix-Your-One-Stop-Kitchen-Shop',
   },
   {
-    num : '03',
+    num : '04',
     category: 'Wordpress',
     title: 'YouPrint',
-    description: 'Project 6 description',
+    description: 'YouPrint is an online printing services website designed to provide a seamless experience for users to customize and order print products.',
     stack:[{name: 'Wordpress'}, {name: 'Elementor'}, {name: 'Woocommerce'}],
     image: img3,
     live: 'https://www.youprint.ma/',
@@ -53,10 +64,10 @@ const projects = [
     behance:'https://www.behance.net/gallery/212811737/YouPrint-Online-Printing-Services-Website',
   },
   {
-    num : '04',
+    num : '05',
     category: 'fullstack',
     title: 'Jawhar Al Maarifa',
-    description: 'Project 5 description',
+    description: 'Jawhar Al Maarifa is a full-stack LMS platform designed for selling online courses, offering a smooth experience for learners and course creators.',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}, {name: 'React.js'}, {name: 'Redux'}, {name: 'TailwindCSS'}],
     image: img4,
     live: '',
@@ -64,10 +75,10 @@ const projects = [
     behance:'',
   },
   {
-    num : '05',
+    num : '06',
     category: 'backend',
     title: 'SurfMinds',
-    description: 'Project 2 description',
+    description: 'SurfMinds is a backend project focused on delivering efficient data management and robust server-side functionality.',
     stack:[{name: 'Node.js'}, {name: 'Express.js'}, {name: 'MongoDB'}],
     image: img5,
     live: '',
@@ -88,7 +99,7 @@ const Work = () => {
     <motion.section 
     initial={{opacity:0}}
     animate={{opacity:1, transition:{delay:1, duration:0.1, ease:'easeIn'}}}
-    className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
+    className='min-h-[80vh] flex flex-col justify-center py-8 xl:px-0'
     >
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
