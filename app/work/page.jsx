@@ -27,7 +27,7 @@ const projects = [
     description: 'FlickHub is a platform for exploring and managing movie collections with an intuitive user experience.',
     stack:[{name: 'React.js'}, {name: 'Redux'}, {name: 'CSS'}, {name: 'firebase'}],
     image:img6,
-    live: '',
+    live: 'https://flick-hub-c9u1.vercel.app/',
     github: 'https://github.com/zakariaelrharbi/FlickHub',
     behance:'',
   },
