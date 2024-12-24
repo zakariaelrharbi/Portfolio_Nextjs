@@ -186,7 +186,7 @@ const Resume = () => {
         <div className="min-h-[70vh] w-full">
           {/* experience */}
           <TabsContent value='experience' className='w-full'>
-            <div className="flex flex-col gap-[30px] text-center xl:mt-6">
+            <div className="flex flex-col gap-[30px] text-center xl:mt-6 xl:mb-6">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{experience.description}</p>
               <ScrollArea>
@@ -198,7 +198,7 @@ const Resume = () => {
                         <h3 className="text-xl max-w-[390px] min-h-[30px] text-center lg:text-center">{job.title}</h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="bg-accent w-[6px] h-[6px] rounded-full"></span>
+                          <span className="bg-accent w-[6px] h-[6px] rounded-full "></span>
                           <p className="text-white/70">{job.company}</p>
                         </div>
                       </li>
@@ -212,7 +212,7 @@ const Resume = () => {
           </TabsContent>
           {/* education*/}
           <TabsContent value='education' className='w-full'>
-          <div className="flex flex-col gap-[30px] text-center xl:mt-6">
+          <div className="flex flex-col gap-[30px] text-center xl:mt-6 xl:mb-6">
               <h3 className="text-4xl font-bold">{education.title}</h3>
               <p className="text-left ml-5 max-w-[680px] text-white/70 mx-auto xl:mx-0">{education.description}</p>
               <ScrollArea className='h-[400px]'>
@@ -239,7 +239,7 @@ const Resume = () => {
           {/* skills */}
           <TabsContent value='skills' className='w-full h-full'>
             <div className="flex flex-col gap-[30px]">
-              <div className="flex flex-col gap-[30px] text-center xl:mt-6">
+              <div className="flex flex-col gap-[30px] text-center xl:mt-6 ">
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[710px] text-white/70 mx-auto xl:mx-0 text-left">{skills.description}</p>
               </div>
