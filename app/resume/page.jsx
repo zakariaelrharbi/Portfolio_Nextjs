@@ -58,17 +58,24 @@ const experience = {
   title: 'My Experience',
   description: 'I have worked on a variety of projects, including building websites from scratch, creating web applications, and developing APIs. I have experience with both front-end and back-end technologies, and I am always looking for new challenges to tackle.',
   jobs: [
+    
+    {
+      company: 'Studio 3d - Real Estate Media ',
+      title: 'FRONT END DEVELOPER INTERN',
+      date: ' february 2025 - july 2025',
+      description: 'Built user interface for ERP immobilier app using Next.js. Integrated UI with APIs for property and client data',
+    },
+    {
+      company: 'Influence Global',
+      title: 'Full Stack Developer Intern',
+      date: 'June 2024 - November 2024',
+      description: 'Developing an online print shop using React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
+    },
     {
       company: 'Arkx Talent Factory',
       title: 'Full Stack Developer Intern',
       date: 'Jan 2024 - June 2024',
       description: 'Developed websites and web applications for clients using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
-    },
-    {
-      company: 'Influence Global',
-      title: 'Full Stack Developer Intern',
-      date: 'June 2024 - present',
-      description: 'Developing an online print shop using React, Node.js, and MongoDB. Worked on both front-end and back-end development, and collaborated with clients to deliver high-quality products.'
     },
   ],
 };

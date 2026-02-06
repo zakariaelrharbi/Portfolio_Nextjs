@@ -17,11 +17,35 @@ import img3 from '../../public/youpr1.svg'
 import img4 from '../../public/jawhar1.svg'
 import img5 from '../../public/surf1.svg'
 import img6 from '../../public/flickhub.svg'
+import img7 from '../../public/erp.png'
+import img8 from'../../public/imo.png'
 
 
 const projects = [
   {
     num : '01',
+    category: 'front-end',
+    title: 'Immobilier',
+    description: 'espace client for client to track their properties, manage their transactions, and access personalized services related to their real estate investments.',
+    stack:[{name: 'React.js'}, {name: 'Redux'}, {name: 'tailwind css'}, {name: 'framer motion'}],
+    image:img8,
+    live: 'https://flick-hub-c9u1.vercel.app/',
+    github: 'https://github.com/zakariaelrharbi/FlickHub',
+    behance:''
+  },
+  {
+    num : '02',
+    category: 'front-end',
+    title: 'ERP Immobilier',
+    description: 'ERP Immobilier is a real estate management platform that streamlines property listings, client management, and transactions for real estate professionals.',
+    stack:[{name: 'Next.js'}, {name: 'tailwind css'}],
+    image:img7,
+    live: 'https://frontend-immogestion.vercel.app/login',
+    github: 'https://github.com/Studio-3D/frontend_immogestion',
+    behance:'',
+  },
+  {
+    num : '03',
     category: 'front-end',
     title: 'FlickHub',
     description: 'FlickHub is a platform for exploring and managing movie collections with an intuitive user experience.',
@@ -32,7 +56,7 @@ const projects = [
     behance:'',
   },
   {
-    num : '02',
+    num : '04',
     category: 'fullstack',
     title: 'Bloglet',
     description: 'Bloglet is a full-stack blogging platform. It provides a seamless experience for creating, managing, and sharing blog posts.',
@@ -43,7 +67,7 @@ const projects = [
     behance:'',
   },
   {
-    num : '03',
+    num : '05',
     category: 'Wordpress',
     title: 'Cuisinix',
     description: 'Discover the sleek and user-friendly web design of Cuisinix, an e-commerce platform dedicated to selling all kitchen essentials. ',
@@ -54,7 +78,7 @@ const projects = [
     behance:'https://www.behance.net/gallery/213050035/Cuisinix-Your-One-Stop-Kitchen-Shop',
   },
   {
-    num : '04',
+    num : '06',
     category: 'Wordpress',
     title: 'YouPrint',
     description: 'YouPrint is an online printing services website designed to provide a seamless experience for users to customize and order print products.',
@@ -65,7 +89,7 @@ const projects = [
     behance:'https://www.behance.net/gallery/212811737/YouPrint-Online-Printing-Services-Website',
   },
   {
-    num : '05',
+    num : '07',
     category: 'fullstack',
     title: 'Jawhar Al Maarifa',
     description: 'Jawhar Al Maarifa is a full-stack LMS platform designed for selling online courses, offering a smooth experience for learners and course creators.',
@@ -76,7 +100,7 @@ const projects = [
     behance:'',
   },
   {
-    num : '06',
+    num : '08',
     category: 'backend',
     title: 'SurfMinds',
     description: 'SurfMinds is a backend project focused on delivering efficient data management and robust server-side functionality.',
