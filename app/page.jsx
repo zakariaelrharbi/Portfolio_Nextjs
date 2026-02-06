@@ -15,7 +15,7 @@ const Page = () => {
   
   const downloadPdf = () => {
     const doc = new jsPDF();
-    const imgUrl = 'https://i.ibb.co/DQr6xXy/Zakaria-Elrharbi-En.jpg';
+    const imgUrl = 'https://i.ibb.co/fVVbQcVH/zakariaelrarbi-frontend.png';
     
     const [pageWidth, pageHeight] = [doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight()];
     const imgWidth = 692, imgHeight = 979;
