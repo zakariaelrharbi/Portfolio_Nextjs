@@ -29,8 +29,8 @@ const projects = [
     description: 'espace client for client to track their properties, manage their transactions, and access personalized services related to their real estate investments.',
     stack:[{name: 'React.js'}, {name: 'Redux'}, {name: 'tailwind css'}, {name: 'framer motion'}],
     image:img8,
-    live: 'https://flick-hub-c9u1.vercel.app/',
-    github: 'https://github.com/zakariaelrharbi/FlickHub',
+    live: 'https://immobilier-seven.vercel.app/',
+    github: 'https://github.com/zakariaelrharbi/Immobilier',
     behance:''
   },
   {
